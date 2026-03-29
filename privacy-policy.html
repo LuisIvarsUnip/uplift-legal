@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Project Intelligence Hub for Jira</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #172B4D; line-height: 1.7; padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    h2 { font-size: 20px; margin: 32px 0 12px; color: #172B4D; }
+    p, li { font-size: 15px; margin-bottom: 12px; }
+    ul { padding-left: 24px; }
+    .meta { color: #6B778C; font-size: 13px; margin-bottom: 32px; }
+    a { color: #0065FF; }
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #DFE1E6; color: #6B778C; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Project Intelligence Hub for Jira &bull; Last updated: March 29, 2026</p>
+
+  <p>This Privacy Policy describes how <strong>Uplift (Luis Ivars Unipessoal Lda)</strong> ("we", "us", "our") handles data in connection with the <strong>Project Intelligence Hub for Jira</strong> application ("the App"), available on the Atlassian Marketplace.</p>
+
+  <h2>1. What Data the App Accesses</h2>
+  <p>The App reads the following data from your Atlassian Jira and Confluence instances to generate reports:</p>
+  <ul>
+    <li>Jira issues (summary, status, priority, assignee, labels, due dates, issue type)</li>
+    <li>Jira sprints (name, dates, goals, state)</li>
+    <li>Jira boards (name, type)</li>
+    <li>Jira versions (name, release date, description)</li>
+    <li>Jira project metadata (project key, name)</li>
+    <li>Current user identity (display name, for report headers)</li>
+    <li>Confluence spaces and pages (for export functionality)</li>
+  </ul>
+
+  <h2>2. How Data is Processed</h2>
+  <p>All data processing occurs entirely within the <strong>Atlassian Forge platform</strong>. The App:</p>
+  <ul>
+    <li>Runs in Atlassian's sandboxed Forge environment (server-side)</li>
+    <li>Renders reports in a sandboxed iframe (client-side)</li>
+    <li>Does <strong>NOT</strong> transmit any data to external servers</li>
+    <li>Does <strong>NOT</strong> use third-party analytics, tracking, or advertising services</li>
+    <li>Does <strong>NOT</strong> collect, store, or process user credentials or API tokens</li>
+  </ul>
+
+  <h2>3. Data Storage</h2>
+  <p>The App stores minimal configuration data using <strong>Atlassian Forge Storage (KVS)</strong>, which is hosted and encrypted by Atlassian within your tenant's infrastructure:</p>
+  <ul>
+    <li>Project settings (client name, project manager name, Confluence space key, custom footer text)</li>
+  </ul>
+  <p>No issue data, user data, or report content is permanently stored. Reports are generated on-demand from live Jira data and are not cached.</p>
+
+  <h2>4. Data Sharing</h2>
+  <p>We do <strong>NOT</strong> share, sell, rent, or disclose any of your data to third parties. The App has no sub-processors.</p>
+
+  <h2>5. Data Retention and Deletion</h2>
+  <p>When the App is uninstalled from your Atlassian site, all data stored in Forge Storage (project settings) is automatically deleted by Atlassian. No data persists after uninstallation.</p>
+
+  <h2>6. Data Residency</h2>
+  <p>The App runs on Atlassian Forge infrastructure and follows your Atlassian tenant's data residency configuration. We do not independently store or transfer data to any specific geographic region.</p>
+
+  <h2>7. GDPR Compliance</h2>
+  <p>We act as a <strong>Data Processor</strong> under the General Data Protection Regulation (GDPR). Atlassian acts as the infrastructure provider. Your organization remains the Data Controller.</p>
+  <ul>
+    <li>The App processes personal data only as necessary to generate reports (display names, assignee information)</li>
+    <li>No personal data is stored beyond the minimal project settings described above</li>
+    <li>Data subject access requests (DSAR) should be directed to your Atlassian site administrator</li>
+  </ul>
+
+  <h2>8. Security</h2>
+  <ul>
+    <li>All data at rest in Forge Storage is encrypted by Atlassian</li>
+    <li>All communication occurs over HTTPS</li>
+    <li>The App uses <code>api.asUser()</code> for all Jira API calls, ensuring proper permission scoping</li>
+    <li>No credentials or secrets are stored in the App</li>
+    <li>The App requests only the minimum Forge scopes necessary for functionality</li>
+  </ul>
+
+  <h2>9. Children's Privacy</h2>
+  <p>The App is designed for business use within Atlassian products and is not intended for use by children under 16.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance.</p>
+
+  <h2>11. Contact</h2>
+  <p>For questions about this Privacy Policy or data handling practices, contact us at:</p>
+  <ul>
+    <li>Email: <a href="mailto:luisivars@luisivars.pt">luisivars@luisivars.pt</a></li>
+    <li>Company: Uplift (Luis Ivars Unipessoal Lda)</li>
+    <li>Country: Portugal</li>
+  </ul>
+
+  <div class="footer">
+    &copy; 2026 Uplift (Luis Ivars Unipessoal Lda). All rights reserved.
+  </div>
+</body>
+</html>
