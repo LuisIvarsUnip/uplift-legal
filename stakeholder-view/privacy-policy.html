@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Stakeholder View for Jira</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #172B4D; line-height: 1.7; padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    h2 { font-size: 20px; margin: 32px 0 12px; color: #172B4D; }
+    p, li { font-size: 15px; margin-bottom: 12px; }
+    ul { padding-left: 24px; }
+    .meta { color: #6B778C; font-size: 13px; margin-bottom: 32px; }
+    a { color: #0065FF; }
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #DFE1E6; color: #6B778C; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Stakeholder View for Jira &bull; Last updated: March 30, 2026</p>
+
+  <p>This Privacy Policy describes how <strong>Ivars Apps (Luis Ivars Unipessoal Lda)</strong> ("we", "us", "our") handles data in connection with the <strong>Stakeholder View for Jira</strong> application ("the App"), available on the Atlassian Marketplace.</p>
+
+  <h2>1. What Data the App Accesses</h2>
+  <p>The App reads the following data from your Atlassian Jira instance to generate stakeholder views:</p>
+  <ul>
+    <li>Jira issues (summary, status, priority, assignee display name, due dates, issue type)</li>
+    <li>Jira epics (summary, status, progress, due dates)</li>
+    <li>Jira sprints (name, dates, goals, state)</li>
+    <li>Jira boards (name, type)</li>
+    <li>Jira project metadata (project key, name)</li>
+    <li>Current user identity (display name, for configuration tracking)</li>
+  </ul>
+
+  <h2>2. How Data is Processed</h2>
+  <p>All data processing occurs entirely within the <strong>Atlassian Forge platform</strong>. The App:</p>
+  <ul>
+    <li>Runs in Atlassian's sandboxed Forge environment (server-side)</li>
+    <li>Renders configuration UI in a sandboxed iframe (client-side, within Jira)</li>
+    <li>Renders public stakeholder views via Forge Webtrigger (server-side HTML generation)</li>
+    <li>Does <strong>NOT</strong> transmit any data to external servers</li>
+    <li>Does <strong>NOT</strong> use third-party analytics, tracking, or advertising services</li>
+    <li>Does <strong>NOT</strong> collect, store, or process user credentials or API tokens</li>
+  </ul>
+
+  <h2>3. Public Stakeholder Views</h2>
+  <p>The App generates shareable URLs ("magic links") that display a read-only view of selected project data. These views:</p>
+  <ul>
+    <li>Are generated server-side using Forge Webtrigger — data is fetched and rendered within Atlassian infrastructure</li>
+    <li>Only display data that the project manager has explicitly configured to be visible</li>
+    <li>Do <strong>NOT</strong> expose assignee email addresses, internal comments, or attachments</li>
+    <li>Are protected by unique, revocable tokens with optional expiry dates</li>
+    <li>Can be revoked at any time by the project manager</li>
+  </ul>
+
+  <h2>4. Data Storage</h2>
+  <p>The App stores configuration and access control data using <strong>Atlassian Forge Storage</strong>, which is hosted and encrypted by Atlassian within your tenant's infrastructure:</p>
+  <ul>
+    <li>Project view configuration (which data sections to display, custom titles, branding)</li>
+    <li>Magic link tokens (random identifiers, creation date, expiry, access count)</li>
+    <li>RAG status and dimension settings</li>
+  </ul>
+  <p>No issue data or report content is permanently stored. Stakeholder views are generated on-demand from live Jira data and are not cached.</p>
+
+  <h2>5. Data Sharing</h2>
+  <p>We do <strong>NOT</strong> share, sell, rent, or disclose any of your data to third parties. The App has no sub-processors.</p>
+  <p>When a project manager shares a magic link with an external stakeholder, only the data explicitly configured by the PM is visible in the rendered view. The stakeholder does not gain access to Jira or any data beyond what is shown.</p>
+
+  <h2>6. Data Retention and Deletion</h2>
+  <p>When the App is uninstalled from your Atlassian site, data stored in Forge Storage is soft deleted and retained by Atlassian according to Forge-hosted storage lifecycle policies before permanent deletion.</p>
+  <p>Forge-hosted storage is not automatically restored on reinstallation. Where Atlassian's recovery window applies, data may be recoverable for a limited period through Atlassian support workflows.</p>
+
+  <h2>7. Data Residency</h2>
+  <p>The App runs on Atlassian Forge infrastructure and follows your Atlassian tenant's data residency configuration. We do not independently store or transfer data to any specific geographic region.</p>
+
+  <h2>8. GDPR Compliance</h2>
+  <p>We act as a <strong>Data Processor</strong> under the General Data Protection Regulation (GDPR). Atlassian acts as the infrastructure provider. Your organization remains the Data Controller.</p>
+  <ul>
+    <li>The App processes personal data only as necessary to generate stakeholder views (display names, assignee information)</li>
+    <li>No personal data is stored beyond the minimal configuration described above</li>
+    <li>Data subject access requests (DSAR) should be directed to your Atlassian site administrator</li>
+  </ul>
+
+  <h2>9. Security</h2>
+  <ul>
+    <li>All data at rest in Forge Storage is encrypted by Atlassian</li>
+    <li>All communication occurs over HTTPS</li>
+    <li>The App uses <code>api.asUser()</code> for configuration and <code>api.asApp()</code> for public view rendering, ensuring proper permission scoping</li>
+    <li>Magic link tokens are randomly generated and stored securely in Forge Storage</li>
+    <li>No credentials or secrets are stored in the App</li>
+    <li>The App requests only the minimum Forge scopes necessary for functionality</li>
+  </ul>
+
+  <h2>10. Children's Privacy</h2>
+  <p>The App is designed for business use within Atlassian products and is not intended for use by children under 16.</p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance.</p>
+
+  <h2>12. Contact</h2>
+  <p>For questions about this Privacy Policy or data handling practices, contact us at:</p>
+  <ul>
+    <li>Email: <a href="mailto:luisivars@luisivars.pt">luisivars@luisivars.pt</a></li>
+    <li>Company: Ivars Apps (Luis Ivars Unipessoal Lda)</li>
+    <li>Country: Portugal</li>
+  </ul>
+
+  <div class="footer">
+    &copy; 2026 Ivars Apps (Luis Ivars Unipessoal Lda). All rights reserved.
+  </div>
+</body>
+</html>
