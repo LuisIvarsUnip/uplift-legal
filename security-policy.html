@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Policy — Ivars Apps</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #172B4D; line-height: 1.7; padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    h2 { font-size: 20px; margin: 32px 0 12px; color: #172B4D; }
+    p, li { font-size: 15px; margin-bottom: 12px; }
+    ul { padding-left: 24px; }
+    .meta { color: #6B778C; font-size: 13px; margin-bottom: 32px; }
+    a { color: #0065FF; }
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #DFE1E6; color: #6B778C; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Security Policy</h1>
+  <p class="meta">Ivars Apps &bull; Last updated: April 6, 2026</p>
+
+  <p>This Security Policy describes how <strong>Ivars Apps (Luis Ivars Unipessoal Lda)</strong> secures its Atlassian Marketplace applications and related systems. This policy applies to all apps published by Ivars Apps, including Project Intelligence Hub for Jira and Stakeholder View for Jira.</p>
+
+  <h2>1. Platform Security</h2>
+  <p>All Ivars Apps applications are built exclusively on <strong>Atlassian Forge</strong>, which provides:</p>
+  <ul>
+    <li>Sandboxed execution environment — app code runs in isolated containers managed by Atlassian</li>
+    <li>No external servers — all processing occurs within Atlassian infrastructure</li>
+    <li>Encrypted data at rest — Forge Storage (KVS) is encrypted by Atlassian</li>
+    <li>Encrypted data in transit — all communication occurs over HTTPS/TLS</li>
+    <li>Automatic scaling and availability managed by Atlassian</li>
+  </ul>
+
+  <h2>2. Authentication & Authorization</h2>
+  <ul>
+    <li>Apps use <code>api.asUser()</code> for user-context operations, ensuring actions respect the user's Jira permissions</li>
+    <li>Apps use <code>api.asApp()</code> for server-side operations (e.g., public views), with minimum required scopes</li>
+    <li>No user credentials, passwords, or API tokens are collected, stored, or processed</li>
+    <li>Web triggers validate access tokens on every request before serving any data</li>
+    <li>Magic link tokens are randomly generated, revocable, and support configurable expiry dates</li>
+  </ul>
+
+  <h2>3. Data Protection</h2>
+  <ul>
+    <li>Apps request only the minimum Forge scopes necessary for functionality (principle of least privilege)</li>
+    <li>No end-user data is transmitted to external servers or third parties</li>
+    <li>No personal data is stored beyond minimal app configuration (project settings, token metadata)</li>
+    <li>All dynamic values rendered in HTML output are escaped to prevent cross-site scripting (XSS)</li>
+    <li>No user input is passed to JQL queries or API calls without proper escaping via Forge route template literals</li>
+  </ul>
+
+  <h2>4. Vulnerability Management</h2>
+  <ul>
+    <li>Dependencies are regularly reviewed using <code>npm audit</code> for known vulnerabilities</li>
+    <li>Forge CLI lint checks (<code>forge lint</code>) are run before every deployment to detect security issues</li>
+    <li>Third-party libraries are kept to a minimum and pinned to specific versions</li>
+    <li>We monitor Atlassian's security advisories and update our apps accordingly</li>
+  </ul>
+
+  <h2>5. Incident Response</h2>
+  <p>In the event of a security incident affecting our apps:</p>
+  <ul>
+    <li>We will investigate and assess the impact within <strong>24 hours</strong> of becoming aware</li>
+    <li>Critical security patches will be deployed within <strong>72 hours</strong></li>
+    <li>Affected customers and Atlassian will be notified promptly following Atlassian's <a href="https://developer.atlassian.com/platform/marketplace/app-security-incident-management-guidelines/">Incident Notification guidelines</a></li>
+    <li>Post-incident reviews will be conducted to prevent recurrence</li>
+  </ul>
+
+  <h2>6. Secure Development Practices</h2>
+  <ul>
+    <li>Source code is stored in private GitHub repositories with access controls</li>
+    <li>Multi-factor authentication (MFA) is enabled on all development accounts (GitHub, Atlassian)</li>
+    <li>Code is reviewed before deployment to production</li>
+    <li>Development, staging, and production environments are separated using Forge's environment system</li>
+    <li>We follow Atlassian's <a href="https://developer.atlassian.com/platform/marketplace/security-requirements-more-info/">security requirements for cloud apps</a></li>
+  </ul>
+
+  <h2>7. Workstation Security</h2>
+  <ul>
+    <li>Development workstations use full disk encryption</li>
+    <li>Endpoint protection (antivirus) is active on all development machines</li>
+    <li>Operating systems and development tools are kept up to date with security patches</li>
+    <li>Strong password policies are enforced</li>
+  </ul>
+
+  <h2>8. Logging & Monitoring</h2>
+  <ul>
+    <li>Apps do not log sensitive end-user data (PII, credentials, tokens)</li>
+    <li>Forge platform provides built-in monitoring and error tracking</li>
+    <li>Application errors are monitored via Forge runtime logs</li>
+  </ul>
+
+  <h2>9. Reporting Security Issues</h2>
+  <p>If you discover a security vulnerability in any Ivars Apps product, please report it to:</p>
+  <ul>
+    <li>Email: <a href="mailto:support@luisivars.pt">support@luisivars.pt</a></li>
+  </ul>
+  <p>We will acknowledge receipt within <strong>48 hours</strong> and provide an initial assessment within <strong>5 business days</strong>. We appreciate responsible disclosure and will work with reporters to address issues promptly.</p>
+
+  <h2>10. Policy Updates</h2>
+  <p>This Security Policy is reviewed and updated periodically. Changes will be reflected by updating the "Last updated" date at the top of this page.</p>
+
+  <div class="footer">
+    &copy; 2026 Ivars Apps (Luis Ivars Unipessoal Lda). All rights reserved.
+  </div>
+</body>
+</html>

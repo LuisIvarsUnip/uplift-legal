@@ -1,8 +1,12 @@
-# Ivars Apps — Legal Documents
+# Ivars Apps — Legal & Security Documents
 
-Legal pages for Atlassian Marketplace apps by **Ivars Apps** (Luis Ivars Unipessoal Lda).
+Legal and security pages for Atlassian Marketplace apps by **Ivars Apps** (Luis Ivars Unipessoal Lda).
 
 ---
+
+## Vendor-Wide
+
+- [Security Policy](https://luisivarsunip.github.io/ivars-apps-legal/security-policy.html)
 
 ## Apps
 
@@ -24,5 +28,5 @@ Share live Jira project status with clients — no Jira licence needed. One link
 
 **Ivars Apps** (Luis Ivars Unipessoal Lda)
 - Website: [luisivars.pt](https://luisivars.pt)
-- Email: luisivars@luisivars.pt
+- Email: support@luisivars.pt
 - Location: Portugal
